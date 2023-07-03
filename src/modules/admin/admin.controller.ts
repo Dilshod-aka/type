@@ -1,7 +1,7 @@
 import { Request, Response } from "express";
 import adminService from "./admin.service";
 import AdminService from "./admin.service";
-const jwt = require("jsonwebtoken")
+import jwt from "../../utils/jwt"
 
 class AdminController {
 
