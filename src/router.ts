@@ -1,10 +1,16 @@
 import  { Router } from "express";
-import UserRouter from "./modules/user/user.router";
+import CarRouter from "./modules/car/car.router";
+import CompanyRouter from "./modules/company/company.router";
+import AdminRouter from "./modules/admin/admin.router";
 
 const router = Router()
 
-const userRouter = new UserRouter();
+const carRouter = new CarRouter();
+const companyRouter = new CompanyRouter()
+const adminRouter = new AdminRouter();
 
-router.use('/', userRouter.router);
+router.use('/car', carRouter.router);
+router.use('/', companyRouter.router);
+router.use('/', adminRouter.router);
 
 export default router;
